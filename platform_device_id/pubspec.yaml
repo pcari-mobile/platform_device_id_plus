@@ -15,7 +15,7 @@ dependencies:
   platform_device_id_linux: ^1.0.0
   platform_device_id_web: ^1.0.0
   platform_device_id_windows: ^1.0.0
-  device_info_plus: ^10.1.0
+  device_info_plus: ^11.2.2
   android_id: ^0.4.0
 
 dev_dependencies:
@@ -38,4 +38,3 @@ flutter:
         default_package: platform_device_id_web
       windows:
         default_package: platform_device_id_windows
-

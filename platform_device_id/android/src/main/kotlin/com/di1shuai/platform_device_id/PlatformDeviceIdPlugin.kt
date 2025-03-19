@@ -7,7 +7,6 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
-import io.flutter.plugin.common.PluginRegistry.Registrar
 
 /** PlatformDeviceIdPlugin */
 public class PlatformDeviceIdPlugin: FlutterPlugin, MethodCallHandler {
@@ -31,13 +30,7 @@ public class PlatformDeviceIdPlugin: FlutterPlugin, MethodCallHandler {
   // them functionally equivalent. Only one of onAttachedToEngine or registerWith will be called
   // depending on the user's project. onAttachedToEngine or registerWith must both be defined
   // in the same class.
-  companion object {
-    @JvmStatic
-    fun registerWith(registrar: Registrar) {
-      val channel = MethodChannel(registrar.messenger(), "platform_device_id")
-      channel.setMethodCallHandler(PlatformDeviceIdPlugin())
-    }
-  }
+  
 
   override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
     if (call.method == "getPlatformVersion") {
